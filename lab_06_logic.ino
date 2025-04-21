@@ -211,7 +211,8 @@ void loop()
         correct_track(10);
         if (!leftSensor && !rightSensor && !OleftSensor && !OrightSensor)
         {
-
+            go_straight(regular_spped);
+            delay(100);
             turn_left(regular_speed);
             delay(350);
             countBumper = countBumper + 1;
