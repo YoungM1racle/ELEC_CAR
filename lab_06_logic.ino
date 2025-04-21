@@ -199,10 +199,15 @@ void loop()
         correct_track(10);
         if (!leftSensor && !rightSensor)
         {
+            //stop_car();
+            //delay(10000);
             turn_left(regular_speed);
+            
+            delay(720);
             countBumper++;
-            delay(800);
-        }
+            go_straight(regular_speed);
+            delay(200);
+         }
     }
     if (bumperSensor && countBumper == 4)
     {
@@ -211,7 +216,7 @@ void loop()
         correct_track(10);
         if (!leftSensor && !rightSensor && !OleftSensor && !OrightSensor)
         {
-            go_straight(regular_spped);
+            go_straight(regular_speed);
             delay(100);
             turn_left(regular_speed);
             delay(350);
